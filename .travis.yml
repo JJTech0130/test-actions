@@ -1,7 +1,9 @@
 language: cpp
 arch: arm64
 dist: bionic
-install: sudo apt install openjdk-8-jdk
+install: 
+  - sudo apt update
+  - sudo apt install openjdk-8-jdk -y
 
 script:
   - uname -a
