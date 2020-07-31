@@ -4,10 +4,10 @@ dist: bionic
 install: 
   - sudo apt update
   - sudo apt install openjdk-8-jdk-headless -y
+  - sudo update-alternatives --set java /usr/lib/jvm/java-8-openjdk-arm64/jre/bin/java
+  - sudo update-alternatives --set javac /usr/lib/jvm/java-8-openjdk-arm64/bin/javac
 
 script:
   - uname -a
   - java -version
-  - sudo update-alternatives --set java /usr/lib/jvm/java-8-openjdk-arm64/jre/bin/java
-  - sudo update-alternatives --set javac /usr/lib/jvm/java-8-openjdk-arm64/bin/javac
-  - java -version
+  - javac -version
