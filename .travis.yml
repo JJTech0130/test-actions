@@ -1,0 +1,15 @@
+language: c
+
+arch:
+  - amd64
+  - arm64
+
+compiler:
+  - gcc
+  - clang
+
+install: openjdk-8-jdk
+
+script:
+  - uname -a
+  - java -version
