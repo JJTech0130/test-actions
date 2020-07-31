@@ -1,10 +1,7 @@
 language: cpp
-
-arch:
-  - arm64
-
-
-install: skip
+arch: arm64
+dist: bionic
+install: sudo apt install openjdk-8-jdk
 
 script:
   - uname -a
