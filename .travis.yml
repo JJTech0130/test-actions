@@ -3,7 +3,7 @@ arch: arm64
 dist: bionic
 install: 
   - sudo apt update
-  - sudo apt install openjdk-8-jdk-headless -y
+  - sudo apt install openjdk-8-jdk-headless zlib1g-dev libgl1-mesa-dev qt5-default -y
   - sudo update-alternatives --set java /usr/lib/jvm/java-8-openjdk-arm64/jre/bin/java
   - sudo update-alternatives --set javac /usr/lib/jvm/java-8-openjdk-arm64/bin/javac
 
@@ -11,3 +11,6 @@ script:
   - uname -a
   - java -version
   - javac -version
+  - qmake -version
+  - cmake -version
+  - make -version
