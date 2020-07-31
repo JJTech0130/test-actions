@@ -1,12 +1,12 @@
-language: c
+language: cpp
 
 arch:
-  - amd64
   - arm64
 
 
-install: sudo apt install -y openjdk-8-jdk
+install: skip
 
 script:
   - uname -a
   - java -version
+  - sudo update-alternatives --config java
